@@ -591,5 +591,19 @@ module.exports = function(gMapsApi) {
     this.label.setMap(theMap);
   };
 
+  MarkerWithLabel.prototype.setLabelContent = function(newLabelContent) {
+    this.opt_options.labelContent = newLabelContent;
+    trigerEvent(this.label, 'labelContent_changed');
+  };
+  MarkerWithLabel.prototype.getLabelContent = function() {
+    return this.opt_options.labelContent;
+  };
+
+  MarkerWithLabel.prototype.setLabelStyle = function() {};
+  MarkerWithLabel.prototype.getLabelStyle = function() {};
+
+  MarkerWithLabel.prototype.setLabelClass = function() {};
+  MarkerWithLabel.prototype.getLabelClass = function() {};
+
   return MarkerWithLabel;
 }
