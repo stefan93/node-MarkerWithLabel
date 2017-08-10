@@ -592,11 +592,11 @@ module.exports = function(gMapsApi) {
   };
 
   MarkerWithLabel.prototype.setLabelContent = function(newLabelContent) {
-    this.opt_options.labelContent = newLabelContent;
+    this.label.set('labelContent', newLabelContent);
     trigerEvent(this.label, 'labelContent_changed');
   };
   MarkerWithLabel.prototype.getLabelContent = function() {
-    return this.opt_options.labelContent;
+    return this.label.get("labelContent");
   };
 
   MarkerWithLabel.prototype.setLabelStyle = function() {};
