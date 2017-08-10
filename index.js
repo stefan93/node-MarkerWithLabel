@@ -592,18 +592,25 @@ module.exports = function(gMapsApi) {
   };
 
   MarkerWithLabel.prototype.setLabelContent = function(newLabelContent) {
-    this.label.set('labelContent', newLabelContent);
-    this.label.fireEvent('labelContent_changed');
+    this.labelContent = newLabelContent;
   };
   MarkerWithLabel.prototype.getLabelContent = function() {
-    return this.label.get("labelContent");
+    return this.labelContent;
   };
 
-  MarkerWithLabel.prototype.setLabelStyle = function() {};
-  MarkerWithLabel.prototype.getLabelStyle = function() {};
+  MarkerWithLabel.prototype.setLabelStyle = function(newLabelStyle) {
+    this.labelStyle = newLabelStyle;
+  };
+  MarkerWithLabel.prototype.getLabelStyle = function() {
+    return this.labelStyle;
+  };
 
-  MarkerWithLabel.prototype.setLabelClass = function() {};
-  MarkerWithLabel.prototype.getLabelClass = function() {};
+  MarkerWithLabel.prototype.setLabelClass = function(newLabelClass) {
+    this.labelClass = newLabelClass;
+  };
+  MarkerWithLabel.prototype.getLabelClass = function() {
+    return this.labelClass;
+  };
 
   return MarkerWithLabel;
 }
