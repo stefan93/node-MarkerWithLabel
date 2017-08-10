@@ -592,21 +592,22 @@ module.exports = function(gMapsApi) {
   };
 
   MarkerWithLabel.prototype.setLabelContent = function(newLabelContent) {
-    this.labelContent = newLabelContent;
+    this.set('labelContent', newLabelContent);
+
   };
   MarkerWithLabel.prototype.getLabelContent = function() {
     return this.labelContent;
   };
 
   MarkerWithLabel.prototype.setLabelStyle = function(newLabelStyle) {
-    this.labelStyle = newLabelStyle;
+    this.set('labelStyle', newLabelStyle);
   };
   MarkerWithLabel.prototype.getLabelStyle = function() {
     return this.labelStyle;
   };
 
   MarkerWithLabel.prototype.setLabelClass = function(newLabelClass) {
-    this.labelClass = newLabelClass;
+    this.set('labelClass', newLabelClass);
   };
   MarkerWithLabel.prototype.getLabelClass = function() {
     return this.labelClass;
