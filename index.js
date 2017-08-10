@@ -593,7 +593,7 @@ module.exports = function(gMapsApi) {
 
   MarkerWithLabel.prototype.setLabelContent = function(newLabelContent) {
     this.label.set('labelContent', newLabelContent);
-    trigerEvent(this.label, 'labelContent_changed');
+    this.label.fireEvent('labelContent_changed');
   };
   MarkerWithLabel.prototype.getLabelContent = function() {
     return this.label.get("labelContent");
